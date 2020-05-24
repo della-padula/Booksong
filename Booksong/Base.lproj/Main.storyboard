@@ -129,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GG6-YA-RWd" firstAttribute="top" secondItem="Czg-h1-mZG" secondAttribute="bottom" constant="8" id="02u-OU-Vda"/>
                             <constraint firstItem="Czg-h1-mZG" firstAttribute="leading" secondItem="Bj3-gk-qez" secondAttribute="leading" constant="20" id="51e-eo-6P9"/>
@@ -145,6 +145,8 @@
                     <tabBarItem key="tabBarItem" title="노래검색" id="wEe-fA-qWx"/>
                     <connections>
                         <outlet property="searchSectionView" destination="DVG-sP-FVZ" id="r33-0D-zdQ"/>
+                        <outlet property="subLabel" destination="GG6-YA-RWd" id="0Db-bC-Q0J"/>
+                        <outlet property="titleLabel" destination="Czg-h1-mZG" id="CGQ-yZ-lV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHK-Da-sPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
