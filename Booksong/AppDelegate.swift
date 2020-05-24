@@ -11,18 +11,53 @@ import CoreData
 import GoogleMobileAds
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GADInterstitialDelegate {
 
     var window: UIWindow?
-
+    var interstitial: GADInterstitial?
+    var launchScreenView: UIView?
+    
+    private var adUnitID: String {
+        #if DEBUG
+        return "ca-app-pub-3940256099942544/4411468910"
+        #else
+        return "ca-app-pub-8965771939775493/5086111158"
+        #endif
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+//        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["9df38a15046bac616e9e4e02cf21833a"]
         
+        if let view = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()?.view {
+            launchScreenView = view
+            view.translatesAutoresizingMaskIntoConstraints = false
+            if let rootView = window?.rootViewController?.view {
+                rootView.addSubview(view)
+                var constraints = [NSLayoutConstraint]()
+                constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[view]-0-|", options: [], metrics: nil, views: ["view": view])
+                constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[view]-0-|", options: [], metrics: nil, views: ["view": view])
+                rootView.addConstraints(constraints)
+            }
+        }
+        
+        interstitial = GADInterstitial(adUnitID: adUnitID)
+        interstitial?.delegate = self
+        
+        let request = GADRequest()
+        interstitial?.load(request)
+
         return true
     }
-
-    // MARK: - Core Data stack
+    
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        guard let viewController = window?.rootViewController else { return }
+        ad.present(fromRootViewController: viewController)
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        launchScreenView?.removeFromSuperview()
+    }
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*

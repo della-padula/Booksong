@@ -10,9 +10,15 @@ import Foundation
 import UIKit
 
 public class RoundShadowView: UIView {
-    
     let containerView = UIView()
-    var cornerRadius: CGFloat = 6.0 {
+    
+    public var containerBackgroundColor: UIColor = .white {
+        didSet {
+            self.layoutView()
+        }
+    }
+    
+    public var cornerRadius: CGFloat = 6.0 {
         didSet {
             layoutView()
         }
@@ -24,7 +30,7 @@ public class RoundShadowView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(frame: .zero)
+        super.init(coder: aDecoder)
         layoutView()
     }
     
@@ -38,6 +44,7 @@ public class RoundShadowView: UIView {
         layer.shadowRadius = cornerRadius * 0.6
         
         
+        containerView.backgroundColor = containerBackgroundColor
         containerView.layer.cornerRadius = cornerRadius
         containerView.layer.masksToBounds = true
         addSubview(containerView)

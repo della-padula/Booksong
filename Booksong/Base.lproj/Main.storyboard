@@ -1,39 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cs9-lw-gsE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Splash View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="Booksong" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노래 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqt-SA-zGO">
-                                <rect key="frame" x="162.5" y="438.5" width="89" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="rqt-SA-zGO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VMb-ku-UfA"/>
-                            <constraint firstItem="rqt-SA-zGO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bpi-nQ-Jhw"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="139" y="138"/>
-        </scene>
         <!--홈-->
         <scene sceneID="rJe-vh-4zp">
             <objects>
@@ -109,49 +83,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVG-sP-FVZ" customClass="RoundShadowView" customModule="Booksong" customModuleProvider="target">
-                                <rect key="frame" x="20" y="188" width="374" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Rri-9B-V00"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노래 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czg-h1-mZG">
-                                <rect key="frame" x="20" y="108" width="103" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노래 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8j-G6-S8t">
+                                <rect key="frame" x="26" y="64" width="117.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부르고 싶은 노래를 검색할 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG6-YA-RWd">
-                                <rect key="frame" x="20" y="150" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노래를 검색할 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3Y-Dg-4V1">
+                                <rect key="frame" x="26" y="106.5" width="159" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Voc-14-xOC" customClass="RoundShadowView" customModule="Booksong" customModuleProvider="target">
+                                <rect key="frame" x="26" y="152.5" width="362" height="110"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="nkI-nP-wyr"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tqU-Op-GiI">
+                                <rect key="frame" x="26" y="282.5" width="362" height="519.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qYE-zN-KDe">
+                                        <rect key="frame" x="0.0" y="28" width="362" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qYE-zN-KDe" id="rod-7J-pch">
+                                            <rect key="frame" x="0.0" y="0.0" width="362" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GG6-YA-RWd" firstAttribute="top" secondItem="Czg-h1-mZG" secondAttribute="bottom" constant="8" id="02u-OU-Vda"/>
-                            <constraint firstItem="Czg-h1-mZG" firstAttribute="leading" secondItem="Bj3-gk-qez" secondAttribute="leading" constant="20" id="51e-eo-6P9"/>
-                            <constraint firstItem="GG6-YA-RWd" firstAttribute="centerX" secondItem="Bj3-gk-qez" secondAttribute="centerX" id="FG2-UB-mgA"/>
-                            <constraint firstItem="GG6-YA-RWd" firstAttribute="leading" secondItem="Czg-h1-mZG" secondAttribute="leading" id="Fdc-Lp-BeP"/>
-                            <constraint firstItem="Bj3-gk-qez" firstAttribute="trailing" secondItem="DVG-sP-FVZ" secondAttribute="trailing" constant="20" id="hO8-Dp-pFy"/>
-                            <constraint firstItem="DVG-sP-FVZ" firstAttribute="top" secondItem="GG6-YA-RWd" secondAttribute="bottom" constant="17" id="her-Ds-xOi"/>
-                            <constraint firstItem="Czg-h1-mZG" firstAttribute="top" secondItem="Bj3-gk-qez" secondAttribute="top" constant="20" id="qIR-Sz-alN"/>
-                            <constraint firstItem="DVG-sP-FVZ" firstAttribute="centerX" secondItem="Bj3-gk-qez" secondAttribute="centerX" id="vs8-Ea-5VK"/>
+                            <constraint firstItem="X8j-G6-S8t" firstAttribute="leading" secondItem="Bj3-gk-qez" secondAttribute="leading" constant="26" id="3zg-e9-qTo"/>
+                            <constraint firstItem="Voc-14-xOC" firstAttribute="leading" secondItem="Bj3-gk-qez" secondAttribute="leading" constant="26" id="4Cb-Dy-nJR"/>
+                            <constraint firstItem="Voc-14-xOC" firstAttribute="top" secondItem="L3Y-Dg-4V1" secondAttribute="bottom" constant="28" id="To1-ny-kSx"/>
+                            <constraint firstItem="tqU-Op-GiI" firstAttribute="centerX" secondItem="Bj3-gk-qez" secondAttribute="centerX" id="Ury-YC-efX"/>
+                            <constraint firstItem="Bj3-gk-qez" firstAttribute="bottom" secondItem="tqU-Op-GiI" secondAttribute="bottom" constant="11" id="Xpc-Mf-J1K"/>
+                            <constraint firstItem="tqU-Op-GiI" firstAttribute="top" secondItem="Voc-14-xOC" secondAttribute="bottom" constant="20" id="a1N-p1-7bg"/>
+                            <constraint firstItem="L3Y-Dg-4V1" firstAttribute="leading" secondItem="Bj3-gk-qez" secondAttribute="leading" constant="26" id="ba1-6Z-E7q"/>
+                            <constraint firstItem="Voc-14-xOC" firstAttribute="centerX" secondItem="Bj3-gk-qez" secondAttribute="centerX" id="diI-xT-9ba"/>
+                            <constraint firstItem="tqU-Op-GiI" firstAttribute="leading" secondItem="Bj3-gk-qez" secondAttribute="leading" constant="26" id="goi-Pn-Uax"/>
+                            <constraint firstItem="X8j-G6-S8t" firstAttribute="top" secondItem="Bj3-gk-qez" secondAttribute="top" constant="20" id="imJ-4A-4ni"/>
+                            <constraint firstItem="L3Y-Dg-4V1" firstAttribute="top" secondItem="X8j-G6-S8t" secondAttribute="bottom" constant="4" id="jRA-JQ-bqI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bj3-gk-qez"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="노래검색" id="wEe-fA-qWx"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="searchSectionView" destination="DVG-sP-FVZ" id="r33-0D-zdQ"/>
-                        <outlet property="subLabel" destination="GG6-YA-RWd" id="0Db-bC-Q0J"/>
-                        <outlet property="titleLabel" destination="Czg-h1-mZG" id="CGQ-yZ-lV5"/>
+                        <outlet property="resultTable" destination="tqU-Op-GiI" id="tuG-If-kxY"/>
+                        <outlet property="searchSectionView" destination="Voc-14-xOC" id="sdy-qD-JrJ"/>
+                        <outlet property="subLabel" destination="L3Y-Dg-4V1" id="Cdq-qK-bRx"/>
+                        <outlet property="titleLabel" destination="X8j-G6-S8t" id="MIw-R4-WRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHK-Da-sPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="1679"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="1678.7946428571429"/>
         </scene>
         <!--인기차트-->
         <scene sceneID="hZm-UL-Ve6">
