@@ -1,0 +1,6 @@
+framework module Pods_Booksong {
+  umbrella header "Pods-Booksong-umbrella.h"
+
+  export *
+  module * { export * }
+}
