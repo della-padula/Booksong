@@ -13,6 +13,7 @@ public class SearchViewController: BaseViewController {
     
     @IBOutlet weak var searchSectionView: RoundShadowView!
     @IBOutlet weak var resultTable: UITableView!
+    @IBOutlet weak var placeholderView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subLabel: UILabel!
     
@@ -26,13 +27,11 @@ public class SearchViewController: BaseViewController {
     }
     
     fileprivate func setViewLayout() {
-        self.navigationController?.navigationBar.isHidden = true
         searchSectionView.isHidden = false
         titleLabel.isHidden = false
         subLabel.isHidden = false
         
         searchSectionView.cornerRadius = 20.0
-        
         
         titleLabel.text = "노래 검색"
         subLabel.text = "부르고 싶은 노래를 검색할 수 있습니다."
