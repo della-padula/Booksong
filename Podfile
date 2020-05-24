@@ -6,5 +6,8 @@ target 'Booksong' do
   use_frameworks!
 
   # Pods for Booksong
-
+  pod 'Alamofire'
+  pod 'Kanna'
+  pod 'Kingfisher'
+  pod 'Google-Mobile-Ads-SDK'
 end
